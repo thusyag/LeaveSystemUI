@@ -1,0 +1,198 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: #eee;
+    font-size: 12px;
+}
+
+.card .card-header-primary .card-icon, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card .card-header-primary .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+   
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: #333333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-header {    
+    margin-top: -20px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;    
+    border-radius: 6px !important;
+}
+
+.card-header-primary {
+    background-color: #9c27b0;
+    color: #fff;
+}
+
+.mt-auto {
+    margin-top: 100%; 
+}
+
+.btn {
+    position: relative;
+    padding: 8px 20px;
+    margin: 0.3125rem 1px;
+    font-size: .7rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    cursor: pointer;    
+    border: 0;
+    border-radius: 0.2rem;
+    outline: 0;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: box-shadow, transform;
+}
+
+.btn.btn-primary {
+    color: #fff;
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+
+.btn:hover {
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover {
+    box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+}
+.btn.btn-primary:focus, .btn.btn-primary.focus, .btn.btn-primary:hover {
+    color: #fff;
+    background-color: #9124a3;
+    border-color: #701c7e;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #ffffff;
+    background-color: #9124a3;
+    border-color: #9124a3;
+}
+
+
+.thead-primary {
+    color:#9c27b0;
+}
+
+h4, h5 {
+    font-size: 16px;
+}
+
+.model-header-primary {
+    background-color: #9c27b0;
+    color: #ffffff;
+    margin-top: -20px;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+    margin-left: -15px;
+    margin-right: 20px;
+    border-bottom: none;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+}
+
+.modal-header .close {
+    font-size: 15px;
+    color: #333333;
+    padding: 1rem;
+    padding-top: 20px;
+    padding-right: 20px;
+    margin: -1rem -1rem -1rem auto;
+}
+
+.btn-sm {
+    position: relative;
+    padding: 6px 14px;
+    margin: 0.1125rem 0px;
+    font-size: .65rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    cursor: pointer;    
+    border: 0;
+    border-radius: 0.2rem;
+    outline: 0;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: box-shadow, transform;
+}
+
+.edit{
+    margin-right: 20px;
+    color: blue;
+    font-size: 18px;
+}
+.trash{
+    color: rgb(206, 37, 37);
+    font-size: 18px;
+}
+.card-header-danger{
+    background-color:#dc3545;
+}
+
+.model-form{
+    padding-top: 15px;  
+}
+
+.container-custom {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.btn-add {
+    background-color: #8c249e !important;    
+    color: #ffffff;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    margin-right: -2px;
+    padding: 6px 14px;
+    
+}
+
+.card-title {
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.plus-btn {
+    padding-right: 5px;
+}
+.user-name {
+    color: inherit;    
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;    
+    text-decoration: none;
+    position: relative;
+    display: block;    
+    letter-spacing: 0.5px;    
+}
+.col-form-label {
+    padding-top: 20px;
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}

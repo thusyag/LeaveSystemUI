@@ -1,0 +1,97 @@
+<div class="card ">
+  <div class="card-header card-header-primary">
+    <h4 class="card-title">Enrole New User</h4>
+  </div>
+  <!-- {{ addUserForm.value | json}} -->
+  <div class="card-body">
+    <form [formGroup]="addUserForm" class="container-fluid" (ngSubmit)="onSubmit()">
+      <div class="form-row ">
+        <div class="form-group col-md-4 ">
+          <label for="inputEmail4">User Name</label>
+          <input formControlName="userName" type="text" class="form-control form-control-sm" [class.is-invalid]="addUserForm.get('userName').invalid && addUserForm.get('userName').touched ">
+          <div *ngIf="addUserForm.get('userName').invalid && addUserForm.get('userName').touched ">
+            <small class="text-danger" *ngIf="addUserForm.get('userName').errors?.required">userName is Required
+            </small>
+            <small class="text-danger" *ngIf="addUserForm.get('userName').errors?.minlength">userName must be atleast 3
+              characters </small>
+          </div>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="inputEmail4">Email</label>
+          <input formControlName="email" type="email" class="form-control form-control-sm" [class.is-invalid]="addUserForm.get('email').invalid && addUserForm.get('email').touched ">
+          <div *ngIf="addUserForm.get('email').invalid && addUserForm.get('email').touched ">
+            <small class="text-danger" *ngIf="addUserForm.get('email').errors?.required">Email is Required </small>
+            <small class="text-danger" *ngIf="addUserForm.get('email').errors?.pattern">Please Enter Valid Email
+              Address </small>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">Password</label>
+          <input formControlName="password" type="password" class="form-control form-control-sm" [class.is-invalid]="addUserForm.get('password').invalid && addUserForm.get('password').touched ">
+          <div *ngIf="addUserForm.get('password').invalid && addUserForm.get('password').touched ">
+            <small class="text-danger" *ngIf="addUserForm.get('password').errors?.required">Password is Required
+            </small>
+            <small class="text-danger" *ngIf="addUserForm.get('password').errors?.minlength">password  must be atleast 3 </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstName">First Name</label>
+          <input formControlName="firstName" type="text" class="form-control form-control-sm" [class.is-invalid]="addUserForm.get('firstName').invalid && addUserForm.get('firstName').touched ">
+          <div *ngIf="addUserForm.get('firstName').invalid && addUserForm.get('firstName').touched ">
+            <small class="text-danger" *ngIf="addUserForm.get('firstName').errors?.required">FirstName is Required
+            </small>
+            <small class="text-danger" *ngIf="addUserForm.get('firstName').errors?.minlength">Please Enter must be
+              atleast 3 characters </small>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Last Name</label>
+          <input formControlName="lastName" type="text" class="form-control form-control-sm" [class.is-invalid]="addUserForm.get('lastName').invalid && addUserForm.get('lastName').touched ">
+          <div *ngIf="addUserForm.get('lastName').invalid && addUserForm.get('lastName').touched ">
+            <small class="text-danger" *ngIf="addUserForm.get('lastName').errors?.required">LastName is Required
+            </small>
+            <small class="text-danger" *ngIf="addUserForm.get('lastName').errors?.minlength">Please Enter must be
+              atleast 3 characters </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputRole">Role</label>
+          <select formControlName="roleId" class="form-control form-control-sm">
+            <option selected disabled>Select Role</option>
+            <option *ngFor="let role of roles" value="{{role.id}}">{{role.roleName}}</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputDepartment">Department</label>
+          <select formControlName="departmentId" class="form-control form-control-sm">
+            <option selected disabled>Select Department</option>
+            <option *ngFor="let department of departments" value="{{department.id}}">
+              {{department.departmentName}}</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputDate">Join Date</label>
+          <input formControlName="joinDate" type="date" class="form-control form-control-sm" [class.is-invalid]="addUserForm.get('joinDate').invalid && addUserForm.get('joinDate').touched ">
+          <div *ngIf="addUserForm.get('joinDate').invalid && addUserForm.get('joinDate').touched ">
+            <small class="text-danger" *ngIf="addUserForm.get('joinDate').errors?.required">joinDate is Required
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="float-right">
+          <button type="submit" [disabled]="! addUserForm.valid" class="btn btn-primary">Enrole</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<app-user-profile></app-user-profile>
+<app-edit-user></app-edit-user>

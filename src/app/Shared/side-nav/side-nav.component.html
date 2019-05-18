@@ -1,0 +1,52 @@
+<div class="sidebar">
+  <div class="logo">
+    <a href="#" class="simple-text logo-normal">
+      Leave System
+    </a>
+  </div>
+  <!-- {{userData | json }} -->
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/dashboard']">
+          <i class="material-icons">dashboard</i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <ng-container *ngIf="userData.userRole === 'Admin'">
+      <!-- <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/previlage']">
+          <i class="material-icons">person</i>
+          <p>Previleges</p>
+        </a>
+      </li> -->
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/admin']">
+          <i class="material-icons">content_paste</i>
+          <p>Manage</p>
+        </a>
+      </li>
+      <!-- <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/holiday']">
+          <i class="material-icons">content_paste</i>
+          <p>Holiday</p>
+        </a>
+      </li> -->
+      <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/enrole']">
+            <i class="material-icons">content_paste</i>
+            <p>Manage User</p>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+
+    <!-- <div class="alert alert-success notification" id="alert-success" *ngIf="responseMsg === 'success'">
+      <span class="bold-font">Success:</span> All records were processed correctly!
+    </div>
+
+    <div class="alert alert-danger notification" id="alert-danger" *ngIf="responseMsg === 'fail'">
+      <span class="bold-font">Error:</span> Something went wrong.
+    </div> -->
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17%;
+}
+.btn-circle{
+    border-radius: 20px;
+}
+.input-group-addon{
+    font-size: 24px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: rgb(219, 215, 215);
+}
+.login-input-username{
+    
+}
+.login-input-password{
+    
+}

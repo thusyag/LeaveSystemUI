@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <app-side-nav [userDataChild]="userData" *ngIf="loggedIn"></app-side-nav>
+  <div *ngIf="loggedIn" class="main-panel">
+    <app-top-nav [userDataChild]="userData"></app-top-nav>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-login *ngIf="!loggedIn"></app-login>

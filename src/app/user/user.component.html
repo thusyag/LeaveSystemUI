@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="alert alert-success notification" id="alert-success" *ngIf="responseMsg === 'success'">
+      <span class="bold-font">Success:</span> All records were processed correctly!
+    </div>
+    <div class="alert alert-danger notification" id="alert-danger" *ngIf="responseMsg === 'fail'">
+      <span class="bold-font">Error:</span> Something went wrong.
+    </div>
+    <div class="alert alert-danger notification" id="alert-danger" *ngIf="responseMsg === 'remain_days_error'">
+      <span class="bold-font">Error:</span> You don't have enough remaining days to request.
+    </div>
+    <div class="alert alert-danger notification" id="alert-danger" *ngIf="responseMsg === 'date_range_error'">
+      <span class="bold-font">Error:</span> Please select the correct date range.
+    </div>
+    <div class="alert alert-danger notification" id="alert-danger" *ngIf="responseMsg === 'reason_field_null'">
+      <span class="bold-font">Error:</span> Reason field is empty.
+    </div>
+    <div class="alert alert-danger notification" id="alert-danger" *ngIf="responseMsg === 'unknown_date'">
+        <span class="bold-font">Error:</span> Please select start date and end date.
+      </div>
+    <app-req-leave *ngIf="userRole === 'Employee'"></app-req-leave>
+  </div>
+  <div class="col-md-4">
+    <app-remain-leave *ngIf="userRole === 'Employee'"></app-remain-leave>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <app-pending-req *ngIf="userRole === 'Admin'"></app-pending-req>
+  </div>
+  <div class="col-md-12">
+    <app-leave-history></app-leave-history>
+  </div>
+</div>

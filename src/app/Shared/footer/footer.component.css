@@ -1,0 +1,19 @@
+.align-center {
+    text-align: center;
+    
+}
+
+.footer {
+    color: inherit;
+    padding: 0.9375rem;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-decoration: none;
+    position: relative;
+    display: block; 
+    padding: 0.9375rem 0;
+    background-color: rgba(145, 143, 143, 0.116);
+}
+

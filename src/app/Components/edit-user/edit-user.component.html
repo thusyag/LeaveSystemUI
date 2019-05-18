@@ -1,0 +1,73 @@
+<div class="modal fade bd-example-modal-lg" id="EditUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header model-header-primary">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Update User Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="model-form">
+
+        
+        <form [formGroup]="editUserForm" (ngSubmit)="updateUse()">
+            <!-- {{editUserForm.value | json}} -->
+          <div class="container-custom">
+            <div class="form-row ">
+              <div class="form-group col-md-3 ">
+                <label for="inputEmail4">Id</label>
+                <input formControlName="userId" type="text" class="form-control form-control-sm" readonly>
+              </div>
+              <div class="form-group col-md-4 ">
+                <label for="inputEmail4">User Name</label>
+                <input formControlName="userName" type="text" class="form-control form-control-sm" readonly>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="inputEmail4">Email</label>
+                <input formControlName="email" type="email" class="form-control form-control-sm" >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputFirstName">First Name</label>
+                <input formControlName="firstName" type="text" class="form-control form-control-sm" >
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputLastName">Last Name</label>
+                <input formControlName="lastName" type="text" class="form-control form-control-sm" >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputRole">Role</label>
+                <select formControlName="roleId" class="form-control form-control-sm">
+                  <option selected default hidden>Select Role</option>
+                  <option *ngFor="let role of roles" value="{{role.id}}">{{role.roleName}}</option>
+                 
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="inputDepartment">Department</label>
+                <select formControlName="departmentId" class="form-control form-control-sm">
+                  <option selected default hidden>Select Department</option>
+                  <option *ngFor="let department of departments" value="{{department.id}}">{{department.departmentName}}</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputDate">Join Date</label>
+                <input formControlName="joinDate" type="date" class="form-control form-control-sm">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-send" class="btn btn-primary float-right" data-toggle="modal" data-dismiss="modal" (click)="updateUse()">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

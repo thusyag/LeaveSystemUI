@@ -1,0 +1,76 @@
+
+
+<div class="card">
+  <div class="card-header card-header-primary">
+    <h4 class="card-title">Request Leave</h4>
+    <!-- <p class="card-category">Complete your request</p> -->
+  </div>
+
+  <!-- {{ leaveRequestForm.value | json}}
+
+  {{leaveRequestObj | json}} -->
+  <div class="card-body">
+    <form [formGroup]="leaveRequestForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="bmd-label-floating">Start Date</label>
+            <input formControlName="startDate" [class.border-error]="validStartDate===0" [class.border-non-error]="validStartDate===1" type="date" class="form-control form-control-sm" (change)="getLeaveDays();getRemainingDays();startDateCSS();" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="bmd-label-floating">End Date</label>
+            <input formControlName="endDate" [class.border-error]="validEndDate===0" [class.border-non-error]="validEndDate===1" type="date" class="form-control form-control-sm" (change)="getLeaveDays();getRemainingDays();endDateCSS()">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">Leave Type</label>
+                <select formControlName="leaveType" class="form-control form-control-sm" (change)="getRemainingDays()" [class.border-error]="validLeaveType===0" [class.border-non-error]="validLeaveType===1">
+                  <option selected disabled value="">Select Leave Type</option>
+                  <option *ngFor="let leavetype of leaveTypes" value="{{leavetype.id}}">
+                    {{leavetype.leaveType}}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Leave Days</label>
+                <input type="number" formControlName="leaveDays" class="form-control form-control-sm" min="1" readonly value="{{leaveDays}}">
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Actual Remaining Days</label>
+                  <input type="number" formControlName="remainingDays" class="form-control form-control-sm" min="1" readonly value="{{remainingDays}}">
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="bmd-label-floating">Reason</label>
+            <textarea formControlName="reason" class="form-control form-control-sm" rows="4" [class.border-error]="validReason===0" [class.border-non-error]="validReason===1" (change)="valid=1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="float-right">
+          <button type="submit" class="btn btn-primary">Apply</button>
+          <!-- <button (click)="getUserId()">test</button> -->
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </form>
+
+  </div>
+</div>

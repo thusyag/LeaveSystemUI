@@ -1,0 +1,38 @@
+<!-- Modal -->
+<div class="modal fade" id="AddLeaveTypeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header model-header-primary">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Add Leave Type</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="model-form">
+        <form>
+          <div class="container-custom">
+            <div class="form-row ">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="inputLeaveType">Leave Type</label>
+                  <input type="text" class="form-control form-control-sm" name="leaveType" [(ngModel)]="addLeaveTypesObj.leaveType">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="inputAllocation">Allocation</label>
+                  <input type="text" class="form-control form-control-sm" name="allocationDays" [(ngModel)]="addLeaveTypesObj.allocationDays">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-send" class="btn btn-primary float-right" data-toggle="modal" data-dismiss="modal"
+              (click)="addLeaveType()"> Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

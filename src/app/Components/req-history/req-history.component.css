@@ -1,0 +1,25 @@
+.td-status-accept{
+    color: green;
+}
+
+.td-status-reject{
+    color: red;
+}
+
+.btn {
+    position: relative;
+    padding: 5px 12px;
+    margin: 0.1125rem 0px;
+    font-size: .65rem;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    cursor: pointer;    
+    border: 0;
+    border-radius: 0.2rem;
+    outline: 0;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: box-shadow, transform;
+}

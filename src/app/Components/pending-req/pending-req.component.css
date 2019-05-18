@@ -1,0 +1,12 @@
+td {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    vertical-align: text-bottom;
+}
+.element-style {
+    color: #28a745 !important;
+}
+a{
+    text-decoration: none;
+}
+
